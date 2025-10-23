@@ -1,8 +1,11 @@
-const removeFromArray = function(arr, a, b) {
-    if (!arr.includes(a) && arr.includes(b)) {
-        const index = arr.indexOf(b);
-        return arr.slice(0, index).concat(arr.slice(index + 1));
+const removeFromArray = function(arr, a, b, c, d) {
+    const arrTwo = [a, b, c, d];
+    for (let i = 0; i <= arr.length; i++) {
+        if (arr[i] === arrTwo[i]) {
+            arr = arr.slice(i, 0);
+        }
     }
+    return arr;
 };
 
 // Do not edit below this line
