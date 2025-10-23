@@ -1,6 +1,7 @@
 const removeFromArray = function(arr, a, b) {
-    if (!arr.includes(a) && !arr.includes(b)) {
-        return arr;
+    if (!arr.includes(a) && arr.includes(b)) {
+        const index = arr.indexOf(b);
+        return arr.slice(0, index).concat(arr.slice(index + 1));
     }
 };
 
